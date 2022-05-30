@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sg-carpark-availability/static/css/main.d665ec4d.css",
+    "main.js": "/sg-carpark-availability/static/js/main.8e9e4109.js",
+    "static/js/787.2015bbe8.chunk.js": "/sg-carpark-availability/static/js/787.2015bbe8.chunk.js",
+    "index.html": "/sg-carpark-availability/index.html",
+    "main.d665ec4d.css.map": "/sg-carpark-availability/static/css/main.d665ec4d.css.map",
+    "main.8e9e4109.js.map": "/sg-carpark-availability/static/js/main.8e9e4109.js.map",
+    "787.2015bbe8.chunk.js.map": "/sg-carpark-availability/static/js/787.2015bbe8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d665ec4d.css",
+    "static/js/main.8e9e4109.js"
+  ]
+}

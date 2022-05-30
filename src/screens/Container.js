@@ -4,8 +4,6 @@ import SearchForm from "../components/SearchForm";
 import axios from "axios";
 import API from "../api/API";
 
-console.log(process.env);
-
 const Container = () => {
   const [availCarparks, setAvailCarparks] = useState([,]);
   const [carparkList, setCarparkList] = useState([]);
@@ -14,16 +12,15 @@ const Container = () => {
   const [timeStamp, setTimeStamp] = useState(null);
   const [query, setQuery] = useState("");
 
+  const env = process.env;
+
   const getCarparkData = async () => {
-    const { status, data } = await axios.get(
-      "https://data.gov.sg/api/action/datastore_search",
-      {
-        params: {
-          resource_id: "139a3035-e624-4f56-b63f-89ae28d4ae4c",
-          q: query.toLocaleLowerCase(),
-        },
-      }
-    );
+    const { status, data } = await axios.get(env.REACT_APP_CARPARK_API_URL, {
+      params: {
+        resource_id: env.REACT_APP_CARPARK_RESOURCE_ID,
+        q: query.toLocaleLowerCase(),
+      },
+    });
     if (status === 200) {
       setCarparkList(data.result.records);
     } else {

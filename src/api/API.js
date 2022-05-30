@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const env = process.env;
+
 const API = axios.create({
-  baseURL: "https://api.data.gov.sg/v1/transport",
+  baseURL: env.REACT_APP_AVAILABLE_API_URL,
 });
 
 export default API;

@@ -13,7 +13,7 @@ const Display = ({ availCarparks, carparkList, loading }) => {
       const [{ lots_available }] = carpark_info;
       if (lots_available > 0) {
         return (
-          <tr key={carpark._id}>
+          <tr scope="row" key={carpark._id}>
             <td>
               {carpark.address} <br /> {carpark.car_park_no}
             </td>
@@ -26,16 +26,18 @@ const Display = ({ availCarparks, carparkList, loading }) => {
   });
 
   return (
-    <table>
-      <thead>
-        <tr key="header">
-          <th>Carpark Address</th>
-          <th>Free Parking</th>
-          <th>Availability</th>
-        </tr>
-      </thead>
-      <tbody>{matchCarpark}</tbody>
-    </table>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr key="header">
+            <th scope="col">Carpark Address</th>
+            <th scope="col">Free Parking</th>
+            <th scope="col">Availability</th>
+          </tr>
+        </thead>
+        <tbody>{matchCarpark}</tbody>
+      </table>
+    </div>
   );
 };
 
