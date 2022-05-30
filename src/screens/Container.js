@@ -4,6 +4,8 @@ import SearchForm from "../components/SearchForm";
 import axios from "axios";
 import API from "../api/API";
 
+console.log(process.env);
+
 const Container = () => {
   const [availCarparks, setAvailCarparks] = useState([,]);
   const [carparkList, setCarparkList] = useState([]);
